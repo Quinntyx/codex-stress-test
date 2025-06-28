@@ -26,6 +26,11 @@ pub struct EditorModel {
     pub current: Option<usize>,
 }
 
+#[derive(Default, Clone)]
+pub struct ProjectModel {
+    pub root: Option<PathBuf>,
+}
+
 #[allow(dead_code)]
 impl EditorModel {
     pub fn add_tab(&mut self, tab: FileTab) {
